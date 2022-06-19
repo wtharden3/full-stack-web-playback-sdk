@@ -9,8 +9,19 @@ const port = process.env.PORT;;
 const app = express();
 app.use(express.json());
 
+const controllers = require("./controllers");
+
+// /auth/login to request user authorization by getting an Authorization Code.
+// /auth/callback to request the Access Token using the Authorization Code requested in the previous step
+app.use("/auth", controllers.authcontroller);
+
 app.listen(port, () => {
-  console.log(`Jamming on http://localhost:${port} 🎧`)
+  try {
+    console.log(`Jamming on http://localhost:${port} 🎧`); 
+  } catch (err) {
+    console.log(`[SERVER]: Error ❗️`);
+    console.error(err.message);
+  }
 })
 
 
