@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "node server",
+    "dev": "run-p server start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtharden3/full-stack-web-playback-sdk.git"
+  },
+  "author": "Whitney Harden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wtharden3/full-stack-web-playback-sdk/issues"
+  },
+  "homepage": "https://github.com/wtharden3/full-stack-web-playback-sdk#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
